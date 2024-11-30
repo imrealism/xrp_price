@@ -1,14 +1,32 @@
 # XRP Price Tracker
 
-A simple Python script that fetches real-time XRP (Ripple) price data using the CoinGecko API.
+A Python script that fetches real-time XRP (Ripple) price data using the CoinGecko API and displays it with a live updating chart.
 
 ## Features
 
 - Real-time XRP price tracking in USD and EUR
+- Live updating price chart visualization
+- Historical price movement display (last 100 data points)
 - 24-hour price change percentage
 - Automatic updates every 60 seconds
 - Clean console display
 - No API key required
+
+## Screenshots
+
+The application provides both console output and a graphical visualization:
+
+```
+XRP Price Information:
+--------------------------------------------------
+USD Price: $0.6123
+EUR Price: €0.5602
+24h Change (USD): -2.45%
+Last Updated: 2024-11-30 07:30:15 UTC
+--------------------------------------------------
+```
+
+And a real-time updating chart showing price movements over time.
 
 ## Installation
 
@@ -30,29 +48,24 @@ Run the script using Python:
 python xrp_price.py
 ```
 
-The script will continuously display:
-- Current XRP price in USD and EUR
-- 24-hour price change percentage
-- Last update timestamp
+The script will:
+- Display current XRP price in USD and EUR in the console
+- Show 24-hour price change percentage
+- Display the last update timestamp
+- Open a window with a live-updating price chart
+- Update both displays every 60 seconds
 
-To stop the script, press `Ctrl+C`.
-
-## Sample Output
-```
-XRP Price Information:
---------------------------------------------------
-USD Price: $0.6123
-EUR Price: €0.5602
-24h Change (USD): -2.45%
-Last Updated: 2024-11-30 07:30:15 UTC
---------------------------------------------------
-```
+To stop the script:
+- Close the chart window, or
+- Press `Ctrl+C` in the console
 
 ## Dependencies
 
 - Python 3.6+
 - requests
 - python-dotenv
+- matplotlib
+- numpy
 
 ## Data Source
 
